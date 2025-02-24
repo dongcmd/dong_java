@@ -1,4 +1,13 @@
 package test2;
+
+import java.io.BufferedInputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.Reader;
+
 /*
  * command 라인에서 파일명을 입력받기 : args[0]
  * args값이 없으면 noname.txt 파일 설정하기
@@ -17,7 +26,18 @@ package test2;
  * Hello
  */
 public class Test2 {
-	public static void main(String[] args) {
-
+	public static void main(String[] args) throws IOException {
+		if(args.length == 0) {
+			args[0] = "noname.txt";
+		}
+		System.out.printf("%s에 저장할 내용을 입력하세요\n", args[0]);
+		Reader r = new Reader(System.in);
+		FileOutputStream fos = new FileOutputStream(args[0], true);
+		byte[] b;
+		while(!(new String(b=is.readAllBytes()).equalsIgnoreCase("exit")) ) {
+			System.out.println(123);
+		}
+		
+		
 	}
 }

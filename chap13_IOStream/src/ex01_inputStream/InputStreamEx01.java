@@ -33,7 +33,7 @@ public class InputStreamEx01 {
 		int data = 0;
 		// in.read() : 1 byte씩 읽기
 		while( (data = in.read()) != -1 ) { // Ctrl+z (EOF)
-			System.out.println((char)data);
+			System.out.print((char)data);
 		}
 	}
 

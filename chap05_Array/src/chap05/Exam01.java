@@ -40,5 +40,6 @@ public class Exam01 {
 		System.out.printf("최소값 : %d\n", minVal);
 		System.out.printf("최대 인덱스 : %d\n", maxIndex);
 		System.out.printf("최소 인덱스 : %d\n", minIndex);
+		sc.close();
 	}
 }

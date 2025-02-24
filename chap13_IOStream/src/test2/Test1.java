@@ -1,6 +1,8 @@
 package test2;
 
 import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
@@ -15,16 +17,23 @@ public class Test1 {
 	public static void main(String[] args) throws IOException {
 		File f = new File("src/"); 
 		String[] folders = f.list();
-		List<InputStream> islist = new ArrayList<>();
-		
-		
-		
+		FileOutputStream fos = new FileOutputStream("InputStream예제.txt");
+		byte[] b;
+				
 		for(String path : folders) {
 			File f2 = new File("src/", path);
 			String[] folders2 = f2.list();
 			for(String path2 : folders2) {
-				
+				File f3 = new File("src/"+path, path2);
+				if(f3.getName().contains("InputStream") && f3.getName().contains(".java")) {
+					FileInputStream fis = new FileInputStream(f3);
+					b = fis.readAllBytes();
+					fos.write(b);
+					fis.close();
+				}
 			}
 		}
+		fos.flush();
+		fos.close();
 	}
 }

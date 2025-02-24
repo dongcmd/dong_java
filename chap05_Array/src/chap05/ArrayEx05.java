@@ -25,6 +25,7 @@ public class ArrayEx05 {
 		System.out.printf("%d의 16진수 : ", num);
 		for(int i = index-1; i >= 0; i--) System.out.print(hex[i]);
 		System.out.println();
+		sc.close();
 	}
 
 }
