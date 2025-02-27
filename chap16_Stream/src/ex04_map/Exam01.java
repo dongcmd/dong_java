@@ -1,4 +1,4 @@
-package ex04.map;
+package ex04_map;
 
 import java.util.Arrays;
 import java.util.List;
