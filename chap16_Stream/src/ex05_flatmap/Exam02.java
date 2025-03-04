@@ -13,7 +13,7 @@ public class Exam02 {
 		
 		// 각 String 객체 한줄씩 출력
 		
-		// Stream<String[]> => Stream<String> 변경
+		// Stream<String[]> => Stream<String> 변경 필요
 //		strArrStrm.flatMap(Arrays::stream).forEach(s -> System.out.println(s));
 		strArrStrm.flatMap(arr -> Arrays.stream(arr)).forEach(s -> System.out.println(s));
 

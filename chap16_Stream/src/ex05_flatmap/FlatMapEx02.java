@@ -21,13 +21,12 @@ public class FlatMapEx02 {
 			}
 			return Arrays.stream(intArr);
 		};
-		// list를 IntStream으로 변경하기
-		IntStream isr = list.stream()
-				.flatMapToInt(f);
+		
+		IntStream isr = list.stream() // list<String> => Stream<String>
+				.flatMapToInt(f); // Stream<String> => IntStream
 		isr.forEach(System.out::println);
 		
 		//숫자들의 개수, 합, 평균 출력
-		
 		System.out.println("숫자 갯수 : " + list.stream().flatMapToInt(f).count());
 		isr = list.stream().flatMapToInt(f);
 		System.out.println("숫자 합 : " + list.stream().flatMapToInt(f).sum());

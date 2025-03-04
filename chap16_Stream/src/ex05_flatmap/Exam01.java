@@ -10,10 +10,13 @@ public class Exam01 {
 				"This is a Java book",
 				"Lambda Expressions",
 				"Java8 supports lambda Expressions");
-		list.stream().forEach( s -> {
-			Stream<String> st = Arrays.asList(s.split(" ")).stream();
-			st.forEach( str -> System.out.println(str));
-		});
+//		list.stream().forEach( s -> {
+//			Stream<String> st = Arrays.asList(s.split(" ")).stream();
+//			st.forEach( str -> System.out.println(str));
+//		});
+		
+		list.stream().flatMap(s -> Arrays.stream(s.split(" ")))
+		.forEach(s -> System.out.println(s));
 		
 		}
 }

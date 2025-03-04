@@ -27,6 +27,7 @@ public class FlatMapEx03 {
 		List<List<Student>> stu = new ArrayList<>();
 		stu.add(list1);
 		stu.add(list2);
+		
 		stu.stream().flatMap(List::stream).forEach(System.out::println);
 	}
 }

@@ -52,7 +52,7 @@ public class MapEx02_product {
 	static int con = 1;
 	
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new FileReader("src/ex04_map/product.txt"));
+		BufferedReader br = new BufferedReader(new FileReader("product.txt"));
 		// Stream<String> br.lines() : br의 내용을 한 줄씩 Stream으로 생성 (현재는 txt파일)
 		/*
 		 * int month : 생산월

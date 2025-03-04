@@ -18,7 +18,9 @@ public class SortedEx02 {
 		list.stream().sorted().forEach(System.out::println);
 		
 		System.out.println("총점 순으로 정렬");
-		list.stream().sorted((s1, s2) -> s2.getSum() - s1.getSum()).forEach(System.out::println);
+		list.stream().sorted(
+				(s1, s2) -> s2.getSum() - s1.getSum()
+				).forEach(System.out::println);
 		
 	}
 
